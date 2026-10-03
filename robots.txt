@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /plan/
+Sitemap: https://www.familydayout.com.au/sitemap.xml
