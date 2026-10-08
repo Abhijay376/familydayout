@@ -119,3 +119,5 @@ dialog::backdrop{background:rgba(10,20,35,.55)}.dlg{padding:22px}.dlg h3{margin:
 
 .home-hero{margin:4px 0 14px}.home-hero h1{font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 6px}.home-hero .lede{margin:0;max-width:60ch}
 .ptitle{font-family:"Fredoka",system-ui,sans-serif;font-size:1.9rem;line-height:1.15;margin:.2em 0 .3em}
+
+.prose .cover{width:100%;height:auto;border-radius:18px;margin:6px 0 18px;border:1px solid var(--line)}
