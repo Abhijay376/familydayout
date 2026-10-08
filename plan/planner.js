@@ -115,7 +115,7 @@
   function card(a, Q) {
     const p = a.p, fits = a.out.map((x, i) => `<div class="fit"><b>${Q.teen ? "Your crew" : "Kid " + (kids.indexOf(x.k) + 1) + " (" + x.k.age + ")"}</b>
       <span class="v-${x.v}">${x.v === "not" ? "Not suitable" : x.v === "great" ? "Great" : "OK"}</span><span class="meta">${esc(x.why)}</span></div>`).join("");
-    return `<article class="pcard ${a.tier}"><div class="phead"><div><h3><a href="${KDO.root}vic/${p[5]}/index.html">${esc(p[1])}</a></h3>
+    return `<article class="pcard ${a.tier}"><div class="phead"><div><h3><a href="${KDO.root}vic/${p[5]}/">${esc(p[1])}</a></h3>
       <div class="meta">${p[3]} km · about ${p[4]} min drive${p[4] > Q.drive ? ' · <span class="further">A bit further</span>' : ""}</div></div>
       <div class="cost">${money(cost(p))}</div></div><div class="fitall ${a.tier}">${a.tier === "top" ? "Great for everyone" : "Works for most of the crew"}</div>${a.note ? `<div class="warnline">${esc(a.note)}</div>` : ""}
       <div class="icons">${badges(p)}</div><div class="fits">${fits}</div>${revLine(p)}<div class="btns"><button class="plan-btn" data-id="${p[0]}">Plan my day here</button><button class="ghost" type="button" data-rev="${p[0]}">Write a review</button></div></article>`;
@@ -133,7 +133,7 @@
     // one clearly labelled paid spot above the free results, like a search results page (none booked = advertise slot)
     const ad = (window.KDO.spots || [])[0];
     h += `<article class="pcard adcard"><span class="adtag">Sponsored</span> ${ad ? `<a href="${esc(ad.url)}" rel="sponsored"><b>${esc(ad.name)}</b></a> <span class="meta">${esc(ad.text)}</span>`
-      : `<a href="${KDO.root}list-your-venue/index.html"><b>Your family business here</b></a> <span class="meta">Show your venue to parents planning a day out.</span>`}</article>`;
+      : `<a href="${KDO.root}list-your-venue/"><b>Your family business here</b></a> <span class="meta">Show your venue to parents planning a day out.</span>`}</article>`;
     if (plans.length) h += `<h2 class="tierh">Day plans for your family</h2><div class="plans">${plans.map((pl, i) => planCard(pl, i, Q)).join("")}</div><h2 class="tierh">Or pick a place yourself</h2>`;
     // CLAUDE.md radius rule: km sections, nearest first; inside each, best fit first and a mix of kinds
     let shown = 0;
@@ -170,7 +170,7 @@
     return pick;
   }
   const lunchLine = l => !l ? "Pack a picnic and eat at the park." : l.none ? "Nothing of that kind close by in our data, so pack a picnic."
-    : `<a href="${KDO.root}vic/${l.f[5]}/index.html">${esc(l.f[1])}</a> (${esc(cuiName(l.f[4]))}), ${l.why}.`;
+    : `<a href="${KDO.root}vic/${l.f[5]}/">${esc(l.f[1])}</a> (${esc(cuiName(l.f[4]))}), ${l.why}.`;
   // ---- day plans (owner, 2 Oct 2026): one place for everyone, or split up (little ones to a park, the teen to a skate park) and meet for lunch
   function groups(Q) {
     if (Q.teen || Q.adults < 2 || kids.length < 2) return null;
@@ -207,14 +207,14 @@
   function planCard(pl, i, Q) {
     if (pl.type === "together") {
       const p = pl.a.p;
-      return `<article class="pcard dayplan top"><div class="who">Everyone together</div><h3><a href="${KDO.root}vic/${p[5]}/index.html">${esc(p[1])}</a></h3><p class="meta">${LABEL[p[2]]} · ${p[3]} km · about ${p[4]} min drive · ${money(cost(p))}</p>
+      return `<article class="pcard dayplan top"><div class="who">Everyone together</div><h3><a href="${KDO.root}vic/${p[5]}/">${esc(p[1])}</a></h3><p class="meta">${LABEL[p[2]]} · ${p[3]} km · about ${p[4]} min drive · ${money(cost(p))}</p>
         <ul class="tl"><li><b>Morning</b> ${esc(p[1])}: ${esc(pl.a.out.map(x => x.why).filter((v, j, a) => a.indexOf(v) === j).join("; "))}.</li>
         <li><b>Lunch</b> ${lunchLine(pl.lunch)}</li></ul><button class="plan-btn" type="button" data-plan="${i}">See the full day</button></article>`;
     }
     const ad = Q.adults - 1;
     return `<article class="pcard dayplan splitcard"><div class="who">Split up, then meet for lunch</div>
-      <div class="two"><div class="half"><b>1 adult + the ${names(pl.g.older)}</b><h3><a href="${KDO.root}vic/${pl.a.p[5]}/index.html">${esc(pl.a.p[1])}</a></h3><p class="meta">${LABEL[pl.a.p[2]]} · ${pl.a.p[4]} min drive · ${money(cost(pl.a.p))}</p></div>
-      <div class="half"><b>${ad} adult${ad > 1 ? "s" : ""} + the ${names(pl.g.younger)}</b><h3><a href="${KDO.root}vic/${pl.b.p[5]}/index.html">${esc(pl.b.p[1])}</a></h3><p class="meta">${LABEL[pl.b.p[2]]} · ${pl.b.p[4]} min drive · ${money(cost(pl.b.p))}</p></div></div>
+      <div class="two"><div class="half"><b>1 adult + the ${names(pl.g.older)}</b><h3><a href="${KDO.root}vic/${pl.a.p[5]}/">${esc(pl.a.p[1])}</a></h3><p class="meta">${LABEL[pl.a.p[2]]} · ${pl.a.p[4]} min drive · ${money(cost(pl.a.p))}</p></div>
+      <div class="half"><b>${ad} adult${ad > 1 ? "s" : ""} + the ${names(pl.g.younger)}</b><h3><a href="${KDO.root}vic/${pl.b.p[5]}/">${esc(pl.b.p[1])}</a></h3><p class="meta">${LABEL[pl.b.p[2]]} · ${pl.b.p[4]} min drive · ${money(cost(pl.b.p))}</p></div></div>
       <p class="meta">The two places are about ${pl.apart} km apart.</p><ul class="tl"><li><b>Lunch together</b> ${lunchLine(pl.lunch)}</li></ul>
       <button class="plan-btn" type="button" data-plan="${i}">See the full day</button></article>`;
   }
@@ -243,7 +243,7 @@
       <li><b>${t(arrive)}</b> Arrive at ${esc(p[1])}.</li>
       <li><b>${t(Math.max(end, 720))}</b> Lunch: ${lunchLine(l)}</li>
       <li><b>${t(Math.max(end, 720) + 60)}</b> ${kids.some(k => k.age < 3) && !Q.teen ? "Head home for the little one's nap." : "Head home, or add a park stop on the way."}</li></ul>
-      ${back ? `<h3>If it rains</h3><p>Switch to <a href="${KDO.root}vic/${back.p[5]}/index.html">${esc(back.p[1])}</a>, about ${dist(p, back.p)} km away.</p>` : ""}
+      ${back ? `<h3>If it rains</h3><p>Switch to <a href="${KDO.root}vic/${back.p[5]}/">${esc(back.p[1])}</a>, about ${dist(p, back.p)} km away.</p>` : ""}
       <h3>What it costs</h3><p>${money(cost(p))}${cost(p) == null ? ": check the venue's website before you go." : ""}</p>
       <h3>What to bring</h3><ul class="carry">${bring([p], Q).map(x => `<li>${esc(x)}</li>`).join("")}</ul>
       <h3>Good to know</h3><p>${f.toilet != null ? `Nearest toilet about ${f.toilet} m away. ` : "No public toilet in our data nearby. "}${Q.teen ? "Check the venue's age rules for teens without an adult." : ""}</p>`);

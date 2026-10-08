@@ -65,7 +65,7 @@ table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border-bottom:1p
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 /* planner (from the prototype) */
 .layout{display:grid;gap:22px;grid-template-columns:minmax(0,1fr)}
-@media(min-width:900px){.layout{grid-template-columns:380px minmax(0,1fr);align-items:start}.builder{position:sticky;top:calc(12px + env(safe-area-inset-top,0px))}}
+@media(min-width:900px){.layout{grid-template-columns:380px minmax(0,1fr);align-items:start}.builder{position:sticky;top:calc(12px + env(safe-area-inset-top,0px));max-height:calc(100vh - 24px - env(safe-area-inset-top,0px));overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}}
 .builder{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:20px}
 .builder h1{font-size:1.9rem}fieldset{border:0;padding:0;margin:0 0 18px}legend{font-weight:700;margin-bottom:8px;padding:0}
 .row{display:flex;gap:8px;flex-wrap:wrap}.row>*{flex:1 1 110px;display:grid;gap:2px}
@@ -116,3 +116,6 @@ dialog::backdrop{background:rgba(10,20,35,.55)}.dlg{padding:22px}.dlg h3{margin:
 .photos{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr))}.photos figure{margin:0}.photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
 .photos figcaption{font-size:.72rem;color:var(--muted)}
 .pcard.adcard{border:1px dashed var(--accent);display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;padding:10px 14px}
+
+.home-hero{margin:4px 0 14px}.home-hero h1{font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 6px}.home-hero .lede{margin:0;max-width:60ch}
+.ptitle{font-family:"Fredoka",system-ui,sans-serif;font-size:1.9rem;line-height:1.15;margin:.2em 0 .3em}

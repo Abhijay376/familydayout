@@ -1,3 +1,5 @@
 User-agent: *
+Allow: /plan/planner.js
+Allow: /plan/data/
 Disallow: /plan/
 Sitemap: https://www.familydayout.com.au/sitemap.xml

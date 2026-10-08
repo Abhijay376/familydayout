@@ -1,27 +1,36 @@
 <!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Where should we take the kids today? | Family Day Out</title><meta name="description" content="Tell us the kids&#39; ages, your suburb and the weather. We find places that suit the whole family, and parents share their best day-out ideas.">
+<title>Best Family Kids Activities in Melbourne and Victoria | Family Day Out</title><meta name="description" content="Best family and kids activities in Melbourne and Victoria: free family activities, indoor and outdoor activities, teens activities and weekend things to do with kids.">
 <link rel="canonical" href="https://www.familydayout.com.au/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Figtree:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="site.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Family Day Out", "url": "https://www.familydayout.com.au"}</script></head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DKR3GKF9E9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DKR3GKF9E9');
+</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebSite", "name": "Family Day Out", "url": "https://www.familydayout.com.au/", "description": "Things to do with kids in Melbourne and Victoria."}, {"@context": "https://schema.org", "@type": "Organization", "name": "Family Day Out", "url": "https://www.familydayout.com.au/", "areaServed": "Victoria, Australia"}]</script></head>
 <body><div>
-<header class="site-head"><div class="wrap"><a class="logo" href="index.html"><b>FDO</b> Family Day Out</a>
-<ul class="menu"><li><a href="plan/index.html">Plan a day out</a></li><li><a href="vic/index.html">Places by area</a></li>
-<li><a href="vic/trails/index.html">Trails</a></li><li><a href="vic/teens/index.html">Teens</a></li>
-<li><a href="vic/werribee/school-holidays/index.html">School holidays</a></li><li><a href="vic/plans/index.html">Ready-made plans</a></li><li><a href="list-your-venue/index.html">For businesses</a></li></ul>
-<form class="search" role="search" onsubmit="event.preventDefault();var v=this.q.value.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-');if(v)location.href='vic/'+v+'/index.html'">
+<header class="site-head"><div class="wrap"><a class="logo" href="./"><b>FDO</b> Family Day Out</a>
+<ul class="menu"><li><a href="plan/">Plan a day out</a></li><li><a href="melbourne/">Melbourne</a></li><li><a href="vic/">Places by area</a></li>
+<li><a href="vic/trails/">Trails</a></li><li><a href="vic/teens/">Teens</a></li>
+<li><a href="vic/werribee/school-holidays/">School holidays</a></li><li><a href="vic/plans/">Ready-made plans</a></li><li><a href="blog/">Ideas</a></li><li><a href="list-your-venue/">For businesses</a></li></ul>
+<form class="search" role="search" onsubmit="event.preventDefault();var v=this.q.value.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-');if(v)location.href='vic/'+v+'/'">
 <label for="q" hidden>Suburb</label><input id="q" name="q" placeholder="Your suburb, e.g. Werribee" autocomplete="off"></form></div></header>
 <div class="wrap">
-<main><nav class="apptabs" role="tablist"><button type="button" role="tab" data-tab="plan" aria-selected="true">Plan a day</button><button type="button" role="tab" data-tab="ideas" aria-selected="false">Parent ideas</button><a href="vic/index.html">Browse places</a></nav>
-<section id="tab-ideas" hidden><div class="ideas-head"><div><h1>Parent ideas</h1><p class="meta">Day-out ideas from other parents. Vote for the ones that worked for your family, or share your own.</p></div></div>
+<main><section class="home-hero"><h1>Best Family Kids Activities</h1><p class="lede">Find places to go for families near you: free family activities, indoor and outdoor activities, the best teens activities and cheap things to do with kids on the weekend.</p></section><nav class="apptabs" role="tablist"><button type="button" role="tab" data-tab="plan" aria-selected="true">Plan a day</button><button type="button" role="tab" data-tab="ideas" aria-selected="false">Parent ideas</button><a href="vic/">Browse places</a></nav>
+<section id="tab-ideas" hidden><div class="ideas-head"><div><h2 class="ptitle">Parent ideas</h2><p class="meta">Day-out ideas from other parents. Vote for the ones that worked for your family, or share your own.</p></div></div>
 <div class="layout"><form class="builder" id="ideaForm"><h2>Share an idea</h2><fieldset><label class="stack"><span class="meta">Your idea in a few words</span><input id="i-title" required maxlength="80" placeholder="e.g. Werribee River walk, then the splash park"></label>
 <label class="stack"><span class="meta">Suburb</span><input id="i-sub" required maxlength="40" placeholder="e.g. Werribee"></label><label class="stack"><span class="meta">Kids' ages it suits</span><input id="i-ages" maxlength="30" placeholder="e.g. 3 to 10"></label>
 <label class="stack"><span class="meta">Tips for other parents</span><textarea id="i-tip" maxlength="400" rows="4" placeholder="Where to park, best time to go, what to bring"></textarea></label></fieldset><button class="plan-btn">Share idea</button></form>
 <div id="ideas"></div></div></section>
 <div class="layout" id="tab-plan"><form class="builder" id="f" onsubmit="return false">
 <div class="seg mode" role="radiogroup" aria-label="Who is going"><label><input type="radio" name="mode" value="family" checked><span>Family day out</span></label><label><input type="radio" name="mode" value="teen"><span>Teens &amp; friends</span></label></div>
-<h1 class="fam">Who's coming today?</h1><h1 class="teen">Where's the crew going?</h1>
+<h2 class="fam ptitle">Who's coming today?</h2><h2 class="teen ptitle">Where's the crew going?</h2>
 <p class="meta">Add each kid and where you're starting from. We'll find places that suit everyone.</p>
 <fieldset class="fam"><legend>The kids</legend><div id="kids"></div><button type="button" class="add" id="addKid">+ Add a kid</button></fieldset>
 <fieldset class="teen"><legend>The crew</legend><div class="row"><label><span class="meta">How many</span><select id="friends"><option>2</option><option selected>4</option><option>6</option></select></label>
@@ -35,7 +44,18 @@
 <fieldset class="fam"><legend>Lunch</legend><select id="lunch" aria-label="Lunch"><option value="any">Pick somewhere that suits the kids</option><option value="cafe">Café</option><option value="pizza">Pizza or Italian</option><option value="fish">Fish and chips</option><option value="burger">Burgers or chicken</option><option value="asian">Asian</option><option value="picnic">We'll pack a picnic</option></select></fieldset>
 <fieldset><legend>Also</legend><div class="checks"><label><input type="checkbox" id="free"> Free only</label><label class="fam"><input type="checkbox" id="dog"> Bringing the dog</label><label class="fam"><input type="checkbox" id="fenced"> Fenced playground</label></div></fieldset>
 </form><section id="results" aria-live="polite"></section></div><dialog id="dlg"><div class="dlg" id="dlgBody"></div></dialog>
-<script>window.KDO={root:"",data:"plan/data/",spots:[]}</script><script src="plan/planner.js"></script></main></div>
-<footer class="foot"><div class="wrap"><ul><li><a href="about/index.html">About</a></li><li><a href="how-we-check/index.html">How we check</a></li>
-<li><a href="list-your-venue/index.html">List your business</a></li><li><a href="claim-your-business/index.html">Claim your listing</a></li><li><a href="contact/index.html">Contact</a></li><li><a href="privacy/index.html">Privacy</a></li><li><a href="terms/index.html">Terms</a></li></ul>
-<p>Map data © OpenStreetMap contributors (ODbL). Government data from DataVic, Vicmap, ABS, PTV, the National Public Toilet Map and council open data (CC BY). Data last updated 3 Oct 2026.</p></div></footer></div></body></html>
+<script>window.KDO={root:"",data:"plan/data/",spots:[]}</script><script src="plan/planner.js"></script><section class="prose home-seo">
+<h2>Family activities and kids activities near you</h2>
+<p>Family Day Out lists the best kids activities across Melbourne and regional Victoria: playgrounds, parks, beaches, pools, museums, animal farms, trails and family cafes, with road distances from your suburb. It's built for families with mixed ages, so you can find places to go for families that suit a toddler and a teenager on the same day.</p>
+<h2>Free family activities and cheap things to do</h2>
+<p>Thousands of playgrounds, parks, skate parks, libraries and beaches cost nothing. Every suburb has its own free list, like <a href="vic/werribee/free/">free things to do near Werribee</a>, and the <a href="melbourne/">Melbourne guide</a> picks out the best free family activities in the city.</p>
+<h2>Indoor activities and outdoor activities</h2>
+<p>Raining? Go for indoor activities: play centres, museums, libraries and pools on each suburb's rainy-day page. Sunny? Pick outdoor activities from <a href="vic/trails/">walking and bike trails</a>, beaches and big parks.</p>
+<h2>Best teens activities</h2>
+<p>Skate parks, climbing walls, cinemas and pools that teens enjoy with their friends are on the <a href="vic/teens/">teens page</a>, sorted by area.</p>
+<h2>Things to do with kids on the weekend</h2>
+<p>Use the planner above to build a weekend day out around your kids' ages, the weather and how far you'll drive, with lunch on the way. For local inspiration for families, read our <a href="blog/">ideas</a> or browse <a href="vic/">places by area</a>.</p>
+</section></main></div>
+<footer class="foot"><div class="wrap"><ul><li><a href="about/">About</a></li><li><a href="how-we-check/">How we check</a></li>
+<li><a href="list-your-venue/">List your business</a></li><li><a href="claim-your-business/">Claim your listing</a></li><li><a href="contact/">Contact</a></li><li><a href="privacy/">Privacy</a></li><li><a href="terms/">Terms</a></li></ul>
+<p>Map data © OpenStreetMap contributors (ODbL). Government data from DataVic, Vicmap, ABS, PTV, the National Public Toilet Map and council open data (CC BY). Data last updated 8 Oct 2026.</p></div></footer></div></body></html>
