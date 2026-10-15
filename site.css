@@ -121,3 +121,5 @@ dialog::backdrop{background:rgba(10,20,35,.55)}.dlg{padding:22px}.dlg h3{margin:
 .ptitle{font-family:"Fredoka",system-ui,sans-serif;font-size:1.9rem;line-height:1.15;margin:.2em 0 .3em}
 
 .prose .cover{width:100%;height:auto;border-radius:18px;margin:6px 0 18px;border:1px solid var(--line)}
+
+.quickfacts{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin:8px 0 18px}.quickfacts h2{font-size:1.1rem;margin:0 0 8px}.quickfacts dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:0}.quickfacts dt{color:var(--muted);font-weight:600}.quickfacts dd{margin:0}
