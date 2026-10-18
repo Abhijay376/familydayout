@@ -21,7 +21,7 @@ gtag('config', 'G-DKR3GKF9E9');
 <form class="search" role="search" onsubmit="event.preventDefault();var v=this.q.value.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-');if(v)location.href='../vic/'+v+'/'">
 <label for="q" hidden>Suburb</label><input id="q" name="q" placeholder="Your suburb, e.g. Werribee" autocomplete="off"></form></div></header>
 <div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><span><a href="../list-your-venue/">List your business</a></span><span>Add your business</span></nav>
-<main><div class="layout"><form class="builder bizform" name="register" method="POST" action="#">
+<main><div class="layout"><form class="builder bizform" name="register" method="POST" action="https://fdo-forms.avms-p.workers.dev/api/business-form">
 <input type="hidden" name="form-name" value="register"><p hidden><label>Leave this empty <input name="bot-field"></label></p>
 <h1>Add your business</h1><p class="meta">For venues, cafés and kids&#39; activities that aren&#39;t on Family Day Out yet.</p>
 <label class="stack"><span class="meta">Business name</span><input id="b-name" name="business" required maxlength="120"></label>

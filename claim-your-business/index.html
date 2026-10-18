@@ -21,7 +21,7 @@ gtag('config', 'G-DKR3GKF9E9');
 <form class="search" role="search" onsubmit="event.preventDefault();var v=this.q.value.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-');if(v)location.href='../vic/'+v+'/'">
 <label for="q" hidden>Suburb</label><input id="q" name="q" placeholder="Your suburb, e.g. Werribee" autocomplete="off"></form></div></header>
 <div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><span><a href="../list-your-venue/">List your business</a></span><span>Claim your listing</span></nav>
-<main><div class="layout"><form class="builder bizform" name="claim" method="POST" action="#">
+<main><div class="layout"><form class="builder bizform" name="claim" method="POST" action="https://fdo-forms.avms-p.workers.dev/api/business-form">
 <input type="hidden" name="form-name" value="claim"><p hidden><label>Leave this empty <input name="bot-field"></label></p>
 <h1>Claim your listing</h1><p class="meta">Your business is already listed? Claim it to update the details and choose your suburbs.</p>
 <label class="stack"><span class="meta">Listing you are claiming (name and suburb, or paste its page address)</span><input id="b-listing" name="listing" required maxlength="200"></label>
