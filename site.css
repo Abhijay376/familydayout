@@ -123,3 +123,4 @@ dialog::backdrop{background:rgba(10,20,35,.55)}.dlg{padding:22px}.dlg h3{margin:
 .prose .cover{width:100%;height:auto;border-radius:18px;margin:6px 0 18px;border:1px solid var(--line)}
 
 .quickfacts{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin:8px 0 18px}.quickfacts h2{font-size:1.1rem;margin:0 0 8px}.quickfacts dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:0}.quickfacts dt{color:var(--muted);font-weight:600}.quickfacts dd{margin:0}
+.placephoto{margin:12px 0 18px}.placephoto img{width:100%;max-width:800px;height:auto;aspect-ratio:auto;border-radius:14px;display:block}.placephoto figcaption{font-size:.75rem;color:var(--muted);margin-top:4px}
