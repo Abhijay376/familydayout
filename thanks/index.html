@@ -21,7 +21,31 @@ gtag('config', 'G-DKR3GKF9E9');
 <form class="search" role="search" onsubmit="event.preventDefault();var v=this.q.value.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-');if(v)location.href='../vic/'+v+'/'">
 <label for="q" hidden>Suburb</label><input id="q" name="q" placeholder="Your suburb, e.g. Werribee" autocomplete="off"></form></div></header>
 <div class="wrap">
-<main><div class="prose"><h1>Thanks, we&#39;ve got it</h1><p>We check every request within 2 working days and reply by email.</p></div></main></div>
+<main><div class="prose"><h1>Thanks, we&#39;ve got it</h1><div id="t-plain"><p>We've got your details and will be in touch by email.</p></div>
+<div id="t-claim" hidden>
+<p class="lede">One last step: confirm you act for <b id="t-biz"></b>.</p>
+<ol>
+<li>Click the button below. It opens your email with everything filled in.</li>
+<li id="t-from">Send it from an email address at the business's own website domain.</li>
+<li>That's it. We check the email automatically and reply to confirm.</li>
+</ol>
+<p><a class="plan-btn" id="t-mail" href="#">Email us to confirm</a></p>
+<p class="meta">Your claim code is <b id="t-code"></b>. If the button doesn't open your email, send any email with this code in the subject to <b>verify@familydayout.com.au</b>. Lost the code? Just email us from the business address and mention the business name.</p>
+<p class="meta">Agency or marketing team? Forward the email to someone at the business and ask them to send it.</p>
+<p id="t-status" class="note" role="status">Waiting for your confirmation email…</p>
+</div>
+<script>(function(){var q=new URLSearchParams(location.search),c=q.get("code");if(!/^FDO-[A-Z0-9]{4}$/.test(c||""))return;
+var b=q.get("b")||"your business",d=q.get("d")||"";document.getElementById("t-plain").hidden=true;document.getElementById("t-claim").hidden=false;
+document.getElementById("t-biz").textContent=b;document.getElementById("t-code").textContent=c;
+if(d)document.getElementById("t-from").textContent="Send it from an email address ending in @"+d+" (the website on the listing).";
+var body="Hi Family Day Out,\n\nI confirm that I act for "+b+" and I'm claiming its listing.\n\nClaim code: "+c+"\n";
+document.getElementById("t-mail").href="mailto:verify@familydayout.com.au?subject="+encodeURIComponent("Confirm claim "+c+" - "+b)+"&body="+encodeURIComponent(body);
+var s=document.getElementById("t-status"),n=0;function poll(){fetch("https://fdo-forms.avms-p.workers.dev/status?code="+c).then(function(r){return r.json()}).then(function(j){
+if(j.status==="approved"){s.textContent="Confirmed. Your claim is approved and we'll update the listing.";return}
+if(j.status==="review"){s.textContent="We've got your email. We need to check this one by hand and will be in touch.";return}
+if(j.status==="rejected"){s.textContent="This claim could not be approved. Reply to our email if you think that's wrong.";return}
+if(++n<60)setTimeout(poll,10000)}).catch(function(){})}poll()})();</script>
+</div></main></div>
 <footer class="foot"><div class="wrap"><ul><li><a href="../about/">About</a></li><li><a href="../how-we-check/">How we check</a></li><li><a href="../accessible/">Accessible outings</a></li>
 <li><a href="../list-your-venue/">List your business</a></li><li><a href="../claim-your-business/">Claim your listing</a></li><li><a href="../contact/">Contact</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="../terms/">Terms</a></li></ul>
-<p>Map data © OpenStreetMap contributors (ODbL). Government data from DataVic, Vicmap, ABS, PTV, the National Public Toilet Map and council open data (CC BY). Data last updated 18 Oct 2026.</p></div></footer></div></body></html>
+<p>Map data © OpenStreetMap contributors (ODbL). Government data from DataVic, Vicmap, ABS, PTV, the National Public Toilet Map and council open data (CC BY). Data last updated 19 Oct 2026.</p></div></footer></div></body></html>
